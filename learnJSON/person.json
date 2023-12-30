@@ -1,0 +1,6 @@
+{
+    "name": "Daniel",
+    "age": 23,
+    "isMale": true,
+    "hobbies": ["chess", "osu!", "programming"]
+}

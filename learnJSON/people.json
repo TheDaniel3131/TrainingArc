@@ -1,0 +1,31 @@
+[{
+    "name": "Daniel",
+    "age": 23,
+    "isMale": true,
+    "hobbies": ["chess", "osu!", "programming"]
+},
+{
+    "name": "Billy",
+    "age": 21,
+    "isMale": true,
+    "hobbies": ["sleep", "gym", "insurance"]   
+},
+{
+    "name": "Yong Hui",
+    "age": 25,
+    "isMale": true,
+    "hobbies": ["eat", "CTF", "wang zhe"]
+},
+{
+    "name": "Jackin",
+    "age": 23,
+    "isMale": true,
+    "hobbies": ["eat", "sleep", "play"]
+},
+{
+    "name": "Jia Kin",
+    "age": 21,
+    "isMale": true,
+    "hobbies": ["assignments", "gaming", "cat memes"]
+}
+]
