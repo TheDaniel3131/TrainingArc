@@ -363,3 +363,201 @@ else{
     console.log("You are offline!");
 }
 */
+
+// Lesson 18
+
+document.getElementById("myButton").onclick = function(){
+
+  const myCheckBox = document.getElementById("myCheckBox");
+  const visaBtn = document.getElementById("visaBtn");
+  const mastercardBtn = document.getElementById("mastercardBtn");
+  const paypalBtn = document.getElementById("paypalBtn");
+
+  if(myCheckBox.checked){
+    console.log("You are subscribed!");
+  }
+  else{
+    console.log("You are NOT subscribed!");
+  }
+
+  if(visaBtn.checked){
+    console.log("You are paying with a Visa!");
+  }
+  else if(mastercardBtn.checked){
+    console.log("You are paying with a Mastercard!");
+  }
+  else if(paypalBtn.checked){
+    console.log("You are paying with PayPal!");
+  }
+  else{
+    console.log("You must select a payment type!");
+  }
+}
+
+// Lesson 19
+
+// switch = statement that examines a value 
+//                 for a match against many case clauses.
+//                 More efficient that many "else if" statements
+
+let grade = "A";
+
+switch(grade){
+ 
+    case "A":
+      console.log("You did great!");
+      break;
+   
+    case "B":
+      console.log("You did good!");
+      break;
+ 
+    case "C":
+      console.log("You did okay!");
+      break;
+ 
+    case "D":
+      console.log("You passed ... barely");
+      break;
+ 
+    case "F":
+      console.log("YOU FAILED!");
+      break;
+ 
+    default:
+      console.log(grade, "is not a letter grade");
+}
+
+/*
+let grade = 95;
+
+switch(true){
+
+    case grade >= 90:
+        console.log("You did great!");
+        break;
+
+    case grade >= 80:
+        console.log("You did good!");
+        break;
+
+    case grade >= 70:
+        console.log("You did okay!");
+        break;
+
+    case grade >= 60:
+        console.log("You passed ... barely");
+        break;
+
+    case grade > 60:
+        console.log("You FAILED!");
+        break;
+
+    default:
+        console.log(grade, "is not a letter grade!");
+}
+*/
+
+
+// Lesson 20
+
+// = assignment operator
+// == comparison operator
+// === strict equality operator
+
+let x = "3.14";
+
+if(x === 3.14){
+    console.log("That is pi");
+}
+else{
+    console.log("That is NOT pi");
+}
+
+
+// Lesson 21
+
+// Gives us the ability to check more than 1 condition concurrently
+// && AND (BOTH conditions must be true)
+// || OR (Either condition can be true)
+
+let temp = 15;
+let sunny = false;
+
+if(temp > 0 && temp < 30 && sunny){
+    console.log('The weather is good!');
+}
+else{
+    console.log('The weather is bad!');
+}
+
+
+// Lesson 22
+
+// / ! NOT logical operator
+// typically used to reverse a condition's boolean value
+// true -> false  false -> true
+
+let temp = 15;
+let sunny = false;
+
+if(!(temp > 0)){
+    console.log("It's cold outside");
+}
+else{
+    console.log("It's warm outside");
+}
+
+if(!sunny){
+    console.log("It's cloudy outside");
+}
+else{
+    console.log("It's sunny outside");
+}
+
+// Lesson 23
+
+// while loop = repeat some code 
+//                       while some condition is true
+//                       potentially infinite
+
+let userName = "";
+
+while(userName == "" || userName == null){
+    userName = window.prompt("Enter your name");
+}
+
+console.log("Hello", userName);
+
+
+// Lesson 24
+
+// do while loop = do something,
+//                             then check the condition,
+//                             repeat if condition is true
+
+let userName;
+
+do{
+    userName = window.prompt("Enter your name");
+}while(userName == "")
+
+console.log("Hello", userName);
+
+
+
+// Lesson 25
+
+// for loop = repeat some code a 
+//            certain amount of times
+/*
+for(let i = 1; i <= 10; i+=1){
+    console.log(i);
+}
+*/
+for(let i = 10; i > 0; i-=1){
+    console.log(i);
+}
+
+console.log("HAPPY NEW YEAR!");
+
