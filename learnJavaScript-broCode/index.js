@@ -561,3 +561,51 @@ for(let i = 10; i > 0; i-=1){
 
 console.log("HAPPY NEW YEAR!");
 
+
+// Lesson 26
+
+// break = breaks out of a loop entirely
+// continue = skip an iteration of a loop
+
+for(let i = 1; i <= 20; i+=1){
+    if(i == 13){
+        //break;
+        //continue;
+    }
+    console.log(i);
+}
+
+
+// Lesson 27
+
+// nested loop = a loop inside of another loop
+
+let symbol = window.prompt("Enter a symbol to use");
+let rows = window.prompt('Enter # of rows');
+let columns = window.prompt('Enter # of columns');
+
+for(let i = 1; i <= rows; i+=1){
+    for(let j = 1; j <= columns; j+=1){
+        document.getElementById("myRectangle").innerHTML += symbol;
+    }
+    document.getElementById("myRectangle").innerHTML += "<br>";
+}
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+//     <link rel="stylesheet" href="style.css">
+// </head>
+// <body>
+//     <label id="myRectangle"></label>
+//     <script src="index.js"></script>
+// </body>
+// </html>
+
+
+// Lesson 28
+
