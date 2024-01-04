@@ -628,3 +628,174 @@ function happyBirthday(userName, age){
     console.log("Happy birthday to you!");
     console.log("You are", age,"years old!");
 }
+
+// Lesson 29
+
+// return = returns a value back to the place 
+//               where you invoked a function
+
+let area;
+let width;
+let height;
+
+width = window.prompt("Enter width");
+height = window.prompt("Enter height");
+
+area = getArea(width, height);
+
+console.log("The area is:", area);
+
+function getArea(width, height){
+    return width * height;
+}
+
+
+// Lesson 30
+
+// ternary operator = Shortcut for an 'if/else statement'
+//                                  Takes 3 operands
+ 
+//                    1. a condition with ?
+//                    2. expression if True :
+//                    3. expression if False
+ 
+// condition ? exprIfTrue : exprIfFalse
+ 
+let adult = checkAge(12);
+console.log(adult);
+ 
+function checkAge(age){
+ 
+    return age >= 18? true : false;
+}
+/*
+checkWinner(false);
+ 
+function checkWinner(win){
+ 
+    win ? console.log("You win!") : console.log("You lose!");
+}
+*/
+
+
+// Lesson 31
+
+// variable scope = where a variable is accessible
+
+// let = variables are limited to block scope {}
+// var = variables are limited to a function(){}
+
+for(let i = 1; i <= 3; i+=1){
+    //console.log(i);
+}
+for(var i = 1; i <= 3; i+=1){
+    //console.log(i);
+}
+
+
+// Lesson 32
+
+// Template literals = delimited with (`)
+//                                   instead of double or single quotes
+//                                   allows embedded variables and expressions
+
+let userName = "Bro";
+let items = 3;
+let total = 75;
+
+//console.log("Hello", userName);
+//console.log("You have", items, "items in your cart");
+//console.log("Your total is $", total);
+
+//console.log(`Hello ${userName}`);
+//console.log(`You have ${items} items in your cart`);
+//console.log(`Your total is $${total}`);
+
+let text = 
+`Hello ${userName}<br>
+You have ${items} items in your cart<br>
+Your total is $${total}<br>`;
+
+//console.log(text);
+document.getElementById("myLabel").innerHTML = text;
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+//     <link rel="stylesheet" href="style.css">
+// </head>
+// <body>
+//     <label id="myLabel"></label>
+//     <script src="index.js"></script>
+// </body>
+// </html>
+
+// Lesson 33
+
+//toLocaleString() = returns a string with a language 
+//                                sensitive representation of this number
+
+// number.toLocaleString(locale, {options});
+
+// 'locale' = specify that language (undefined = default set in browser)
+// 'options' = object with formatting options
+
+let myNum = 123456.789;
+
+//myNum = myNum.toLocaleString("en-US"); // US English
+//myNum = myNum.toLocaleString("hi-IN"); // Hindi
+//myNum = myNum.toLocaleString("de-DE"); // standard German
+
+myNum = myNum.toLocaleString("en-US", {style: "currency", currency: "USD"});
+//myNum = myNum.toLocaleString("hi-IN", {style: "currency", currency: "INR"});
+//myNum = myNum.toLocaleString("de-DE", {style: "currency", currency: "EUR"});
+
+//myNum = myNum.toLocaleString(undefined, {style: "percent"});
+//myNum = myNum.toLocaleString(undefined, {style: "unit", unit: "celsius"});
+
+console.log(myNum);
+
+
+// Lesson 34
+
+const answer = Math.floor(Math.random() * 10 + 1);
+let guesses = 0;
+
+document.getElementById("submitButton").onclick = function (){
+
+  let guess = document.getElementById("guessField").value
+  guesses+=1;
+  
+  if(guess == answer){
+    alert(`${answer} is the #. It took you ${guesses} guesses`);
+  }
+  else if(guess < answer){
+    alert("Too small!");
+  }
+  else{
+    alert("Too large!");
+  }
+}
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+//     <link rel="stylesheet" href="style.css">
+// </head>
+// <body>
+//     <h1>Number Guessing Game</h1>
+//     <p>Pick a # between 1 - 10</p>
+//     <label>Enter a guess</label>
+
+//     <input id="guessField">
+//     <input type="submit" id="submitButton">
+//     <script src="index.js"></script>
+// </body>
+// </html>
