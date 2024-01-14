@@ -1026,6 +1026,43 @@ function print(element){
     console.log(element);
 }
 
+// Lesson 44
 
+//array.map() = executes a provided callback function
+//                         once for each array element
+//                         AND creates a new array
 
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(square);
+let cubes = numbers.map(cube);
 
+//numbers.forEach(print);
+//squares.forEach(print);
+//cubes.forEach(print);
+
+function square(element){
+    return Math.pow(element, 2);
+}
+function cube(element){
+    return Math.pow(element, 3);
+}
+function print(element){
+    console.log(element);
+}
+
+// Lesson 45
+
+//array.filter() = creates a new array with all elements 
+//                         that pass the test provided by a function
+
+let ages = [18, 16, 21, 17, 19, 90];
+let adults = ages.filter(checkAge);
+
+adults.forEach(print);
+
+function checkAge(element){
+    return element >= 18;
+}
+function print(element){
+    console.log(element);
+}
