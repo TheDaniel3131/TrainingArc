@@ -1066,3 +1066,111 @@ function checkAge(element){
 function print(element){
     console.log(element);
 }
+
+// Lesson 46
+
+//array.reduce() = reduces an array to a single value            
+
+let prices = [5, 10, 15, 20, 25, 30];
+let total = prices.reduce(checkOut);
+
+console.log(`The total is: $${total}`);
+
+function checkOut(total, element){
+    return total + element;
+}
+
+// Lesson 47
+
+let grades = [100, 50, 90, 60, 80, 70];
+
+grades = grades.sort(descendingSort);
+
+grades.forEach(print);
+
+function descendingSort(x, y){
+    return y - x;
+}
+function ascendingSort(x, y){
+    return x - y;
+}
+function print(element){
+    console.log(element);
+}
+
+
+// Lesson 48
+
+// function expression = function without a name (anonymous function)
+//                                        avoid polluting the global scope with names
+//                                        write it, then forget about it
+// ------------ Example 1 ------------
+const greeting = function(){
+    console.log("hello");
+}
+greeting();
+// ------------ Example 2 ------------
+let count = 0;
+
+document.getElementById("increaseButton").onclick = function(){
+    count+=1;
+    document.getElementById("myLabel").innerHTML = count;
+}
+document.getElementById("decreaseButton").onclick = function(){
+    count-=1;
+    document.getElementById("myLabel").innerHTML = count;
+}
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+//     <link rel="stylesheet" href="style.css">
+// </head>
+// <body>
+//     <label id="myLabel">0</label><br>
+//     <button id="decreaseButton">decrease</button>
+//     <button id="increaseButton">increase</button>
+//     <script src="index.js"></script>
+// </body>
+// </html>
+
+
+// Lesson 49
+
+// arrow function expression = compact alternative to a traditional function expression
+//      =>
+
+const grades = [100, 50, 90, 60, 80, 70];
+
+grades.sort((x, y) => y - x);
+grades.forEach((element) => console.log(element));
+
+
+// Lesson 50
+
+let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+shuffle(cards);
+
+console.log(cards);
+//console.log(cards[0]);
+//cards.forEach(card => console.log(card));
+
+function shuffle(array){
+  let currentIndex = array.length;
+
+  while(currentIndex != 0){
+    let randomIndex = Math.floor(Math.random() * array.length);
+    currentIndex-=1;
+
+    let temp = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temp;
+  }
+  
+  return array;
+}
